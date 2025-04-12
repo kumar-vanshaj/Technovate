@@ -1,0 +1,165 @@
+<!-- predict.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disease Prediction - MediCare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9fd;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #0077b6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .container h2 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    .container p {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+      padding: 0.75rem;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .container button {
+      padding: 0.7rem 1.5rem;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .container button:hover {
+      background-color: #005f8c;
+    }
+
+    .result {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    #nearby-btn {
+      margin-top: 1.5rem;
+      display: none;
+    }
+
+    #nearby-btn a button {
+      background-color: #00b48a;
+    }
+
+    #nearby-btn a button:hover {
+      background-color: #009a77;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MediCare</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="predict.html">Disease Prediction</a></li>
+      <li><a href="history.html">Medical History</a></li>
+      <li><a href="diet-chart.html">Diet Chart</a></li>
+      <li><a href="doctors.html">Doctor List</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Disease Prediction</h2>
+    <p>Enter your symptoms below (e.g., fever, cough, headache)</p>
+    <input type="text" id="symptomsInput" placeholder="Enter symptoms" />
+    <br />
+    <button onclick="predictDisease()">Predict</button>
+
+    <div id="result" class="result"></div>
+
+    <div id="nearby-btn">
+      <a href="doctors.html">
+        <button>Nearby Doctors</button>
+      </a>
+    </div>
+    <div id="nearby-btn">
+      <a href="diet-chart.html">
+        <button> Diet Chart</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function predictDisease() {
+      const symptoms = document.getElementById('symptomsInput').value.trim();
+      const resultBox = document.getElementById('result');
+      const nearbyBtn = document.getElementById('nearby-btn');
+
+      if (!symptoms) {
+        resultBox.textContent = "Please enter some symptoms.";
+        nearbyBtn.style.display = "none";
+        return;
+      }
+
+      // Mock prediction logic (replace with backend call later)
+      const prediction = "Flu";
+
+      resultBox.textContent = `Predicted Condition: ${prediction}`;
+      nearbyBtn.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

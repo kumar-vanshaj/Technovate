@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diet Chart - MediCare</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f9fd;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #0077b6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    .condition {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .chart {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+
+    .chart h3 {
+      color: #023e8a;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    .chart ul {
+      padding-left: 1.2rem;
+    }
+
+    .chart li {
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-btn a {
+      background: #0077b6;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn a:hover {
+      background: #023e8a;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MediCare</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="predict.html">Disease Prediction</a></li>
+      <li><a href="history.html">Medical History</a></li>
+      <li><a href="diet-chart.html">Diet Chart</a></li>
+      <li><a href="doctors.html">Doctor List</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Personalized Diet Chart</h2>
+    <div class="condition">
+      For: <strong>Diabetes</strong> <!-- You can dynamically change this -->
+    </div>
+
+    <div class="chart">
+      <h3>Recommended Foods</h3>
+      <ul>
+        <li>Whole grains (brown rice, oats, quinoa)</li>
+        <li>Leafy greens (spinach, kale, etc.)</li>
+        <li>Lean proteins (chicken, tofu, eggs)</li>
+        <li>Fruits with low glycemic index (berries, apples)</li>
+        <li>Nuts and seeds (almonds, flaxseeds)</li>
+      </ul>
+
+      <h3>Foods to Avoid</h3>
+      <ul>
+        <li>Refined sugar and sugary drinks</li>
+        <li>Processed foods (cookies, chips)</li>
+        <li>White bread and white rice</li>
+        <li>High-fat dairy products</li>
+        <li>Fried and fast foods</li>
+      </ul>
+    </div>
+
+    <div class="back-btn">
+      <a href="doctors.html">Find Nearby Doctors</a>
+    </div>
+  </div>
+
+</body>
+</html>

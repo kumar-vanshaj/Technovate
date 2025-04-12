@@ -1,0 +1,70 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - MediCare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e7f2fb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-box h2 {
+      color: #0077b6;
+    }
+    .login-box input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .login-box button {
+      width: 95%;
+      padding: 10px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .login-box button:hover {
+      background-color: #005f8d;
+    }
+    .login-box p {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .login-box a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <form class="login-box" action="home.html">
+    <h2>Login to Baymax</h2>
+    <input type="text" placeholder="Email or Phone" required />
+    <input type="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="#">Register</a></p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Baymax</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9fd;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #0077b6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container h2 {
+      color: #0077b6;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 0 4rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .grid a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      background: white;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      color: #0077b6;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .grid a:hover {
+      transform: scale(1.05);
+    }
+
+    .grid img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+    }
+
+    .grid div {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: 3rem 0;
+      text-align: center;
+      background-color: #f1f8ff;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .testimonial-container {
+      display: flex;
+      transition: transform 0.3s ease;
+      gap: 2rem;
+    }
+
+    .testimonial {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      height: 300px; /* Make it square */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial p {
+      font-size: 1rem;
+    }
+
+    .testimonial-slider-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        color: #0077b6;
+        font-size: 2.5rem;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        transition: color 0.3s ease;
+      }
+      
+      .testimonial-slider-button:hover {
+        color: #023e8a;
+      }
+      
+      .testimonial-slider-button.left {
+        left: 20px;
+      }
+      
+      .testimonial-slider-button.right {
+        right: 20px;
+      }
+      
+
+    
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Baymax</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="predict.html">Disease Prediction</a></li>
+      <li><a href="history.html">Medical History</a></li>
+      <li><a href="diet-chart.html">Diet chart</a></li>
+      <li><a href="doctors.html">Doctor List</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to Baymax</h2>
+    <div class="grid">
+      <a href="predict.html">
+        <img src="images/D.jpeg" alt="Disease Prediction" />
+        <div>Disease Prediction</div>
+      </a>
+      <a href="history.html">
+        <img src="images/M.png" alt="Medical History" />
+        <div>Medical History</div>
+      </a>
+      <a href="diet-chart.html">
+        <img src="images/E.png" alt="Estimated Cost" />
+        <div>Diet Chart</div>
+      </a>
+      <a href="doctors.html">
+        <img src="images/FM.jpeg" alt="Doctor List" />
+        <div>Doctor List</div>
+      </a>
+    </div>
+  </div>
+
+  <section class="testimonials">
+    <h3>What Our Users Say</h3>
+    <div class="testimonial-slider">
+      <button class="testimonial-slider-button left" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <p>"Baymax has transformed the way I manage my health. The predictions and cost estimates are so accurate!"</p>
+          <p>- John Doe</p>
+        </div>
+        <div class="testimonial">
+          <p>"The doctor list is extremely helpful, and I found the perfect specialist quickly!"</p>
+          <p>- Jane Smith</p>
+        </div>
+        <div class="testimonial">
+          <p>"I love the seamless experience! Disease prediction results are so easy to understand."</p>
+          <p>- Emily Clark</p>
+        </div>
+        <div class="testimonial">
+          <p>"Baymax has made managing my medical history a breeze. I can easily track everything!"</p>
+          <p>- Michael Johnson</p>
+        </div>
+        <div class="testimonial">
+          <p>"The cost estimates saved me time and money. I feel more in control of my health expenses!"</p>
+          <p>- Sarah Lee</p>
+        </div>
+        <div class="testimonial">
+          <p>"The doctors' recommendations were spot on, and I got the help I needed right away!"</p>
+          <p>- David Brown</p>
+        </div>
+        <div class="testimonial">
+          <p>"The app is very user-friendly. Disease prediction was very accurate for my symptoms!"</p>
+          <p>- Anna White</p>
+        </div>
+        <div class="testimonial">
+          <p>"I appreciate how simple it is to view my medical history, and the cost estimations are a great bonus!"</p>
+          <p>- James Williams</p>
+        </div>
+        <div class="testimonial">
+          <p>"I recommend Baymax to everyone. It's helped me stay on top of my health more easily than ever!"</p>
+          <p>- Emma Taylor</p>
+        </div>
+      </div>
+      <button class="testimonial-slider-button right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    const testimonials = document.querySelector('.testimonial-container');
+    const totalTestimonials = document.querySelectorAll('.testimonial').length;
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = totalTestimonials - 3;  // Wrap around to the last set
+      } else if (currentIndex >= totalTestimonials - 2) {
+        currentIndex = 0;  // Wrap around to the first set
+      }
+      testimonials.style.transform = `translateX(-${currentIndex * 320}px)`; // 320px is the width of one testimonial + gap
+    }
+  </script>
+  
+</body>
+</html>
